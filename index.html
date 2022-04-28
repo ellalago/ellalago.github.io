@@ -14,6 +14,7 @@
       .portrait{
         width: 400px;
         padding:20px;
+        padding-bottom: .0;
       }
       .links a{
         padding:30px;
@@ -26,6 +27,10 @@
       .logobox img{
         width:100px;
         padding-top:20px;
+      }
+      .imgtext{
+        color: Silver;
+        font-size: 10px
       }
       @media only screen and (max-width:600px){
         .links a{
@@ -49,7 +54,16 @@
         <a href="portfoliocollages.html">PORTFOLIO</a>
         <a href="contactinfo.html">CONTACT</a>
       </div>
-      <img class="portrait" src="img/HAWAIIPIC.JPG" alt="">
+      <img class="portrait" src="img/HAWAIIPIC.JPG" alt="" id="image">
+      <p class="imgtext">Click on the image to change it.</p>
     </div>
+    <script>
+    let i = document.getElementById("image");
+    i.addEventListener("click",change);
+      function change(e){
+        i.src="img/nola.png";
+        console.loh("hi")
+      }
+    </script>
   </body>
 </html>
